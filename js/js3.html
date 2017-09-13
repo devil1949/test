@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title> jquery2  </title>
+        <script type="text/javascript" src="jquery-3.2.1.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('#all').click(function(){
+                    $('#checklist :checkbox').attr('checked',true);
+                });
+
+                $('#noall').click(function(){
+                    $('#checklist :checkbox').attr('checked',false);
+                });
+
+                $('#reall').click(function(){
+                    $('#checklist :checkbox').each(function(){
+                        $(this).attr('checked',!$(this).attr('checked'));
+                    });
+                });
+            })
+        </script>
+        <style>
+            .hide{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="checklist">
+            <input type="checkbox" name="" value="1" />篮球
+            <input type="checkbox" name="" value="2" />足球
+            <input type="checkbox" name="" value="3" />羽毛球
+        </div>
+        
+        <input type="button" name="" value="全选" id="all" />
+        <input type="button" name="" value="不选" id="noall" />
+        <input type="button" name="" value="反选" id="reall" />
+
+        <div class="container">
+            <div>
+                <div class="title">Menu1</div>
+                <div class="body hide">
+                    <a href="">content1</a>
+                    <a href="">content2</a>
+                    <a href="">content3</a>
+                </div>
+            </div>
+            <div>
+                <div class="title">Menu2</div>
+                <div class="body hide">
+                    <a href="">content1</a>
+                    <a href="">content2</a>
+                    <a href="">content3</a>
+                </div>
+            </div>
+            <div>
+                <div class="title">Menu3</div>
+                <div class="body hide">
+                    <a href="">content1</a>
+                    <a href="">content2</a>
+                    <a href="">content3</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function(){
+                $('.title').click(function(){
+                    $(this).parent().siblings().children('.body').addClass('hide');
+                    $(this).next().toggleClass('hide');
+                });
+            });
+        </script>
+
+    </body>
+</html>

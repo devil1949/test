@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title> test </title>
+        <style>
+            .shade{
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #333;
+                opacity: 0.6;
+                display: none;
+            }
+            .delete{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 400px;
+                height: 200px;
+                background-color: white;
+                margin-left: -200px;
+                margin-top: -100px;
+                display: none;
+            }
+            .hide{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table border="1">
+            <tr>
+                <th>IP</th>
+                <th>编辑</th>
+            </tr>
+            <tr>
+                <td>127.0.0.1</td>
+                <td>删除</td>
+            </tr>
+            <tr>
+                <td>172.16.1.1</td>
+                <td>删除</td>
+            </tr>
+            <tr>
+                <td>192.168.1.1</td>
+                <td>删除</td>
+            </tr>
+            <tr>
+                <td>255.255.255.0</td>
+                <td>删除</td>
+            </tr>
+        </table>
+
+        <div class="shade"></div>
+        <div class="delete">
+            <div>提示</div>
+            <div>确定要删除吗</div>
+            <div>
+                <input type="button" value="确定" />
+                <input type="button" value="取消" />
+            </div>
+        </div>
+    </body>
+</html>

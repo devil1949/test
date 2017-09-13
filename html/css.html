@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title> test </title>
+        <link rel="stylesheet" href="common-color.css">
+        <style>
+            .logo a,.logo p{
+                background-color:red;
+            }
+            #alex{
+                background-color:red;
+            }
+            div{
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="http://127.0.0.1:7777">
+            name:<input name="username" type="text"/>
+            <br/>
+            pass:<input name="password" type="password"/>
+            <input type="submit" value="submit" />
+            <br/>
+            <label for="7">姓名：<input id="7" type="checkbox" /></label>
+            <br/>
+        </form>
+
+        <div style="background-color:red;float:left;width:20%">alex</div>
+        <div style="background-color:#999;float:right;width:20%">burt</div>
+        <br/>
+        <span>burty</span>
+        <a href='https://www.baidu.com' target='_blank'> Hello World! </a>
+        <p>dddddddddddd</p>
+
+        <div>
+            <a style="cursor:pointer">pointer</a>
+            <a style="cursor:help">help</a>
+            <a style="cursor:wait">wait</a>
+            <a style="cursor:move">move</a>
+            <a style="cursor:crosshair">crosshair</a>
+        </div>
+
+        <div style="position:fixed;height:40px;width:100%;background-color:blue">alex</div>        
+
+        <div style="backgroud: url('1.png');height:60px"></div>
+        <div>
+            <a>kaishi</a>
+            <img src="1.png" />
+            <a>jieshu</a>
+        </div>
+        <div style="border:1px solid red;height:80px;">
+            <div style="border:1px solid red;height:20px;margin:10px;padding:10px">
+                nihao
+            </div>
+        </div>
+
+        <div>
+            <a href='#id1'>第一章</a>
+            <a href='#id2'>第二章</a>
+            <a href='#id3'>第三章</a>
+        </div>
+        <div id='id1' style='height:100px;background-color:red;'>第一章内容</div>
+        <div id='id2' style='height:100px;background-color:blue;'>第二章内容</div>
+        <div id='id3' style='height:100px;background-color:yellow;'>第三章内容</div>
+    </body>
+</html>

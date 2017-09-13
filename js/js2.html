@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title> jquery  </title>
+        <style>
+            .hide{
+                display: none;
+            }
+            .return{
+                position: fixed;
+                width: 100px;
+                height: 50px;
+                right: 20px;
+                bottom: 20px;
+                background-color: red;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="id1">
+            123
+            <a>123</a>
+        </div>
+
+        <input name="username" type="text" value="qwe">
+        <input name="username" type="checkbox" value="123">
+
+        <br/>
+
+        <div id="1x">
+            <p onclick="Open();"><a>+</a> 一线</p>
+            <p class="hide">北京</p>
+            <p class="hide">上海</p>
+            <p class="hide">广州</p>
+        </div>
+        <div id="2x">
+            <p onclick="Open();"><a>+</a> 二线</p>
+            <p class="hide">杭州</p>
+            <p class="hide">成都</p>
+            <p class="hide">武汉</p>
+        </div>
+        <div id="3x">
+            <p onclick="Open();"><a>+</a> 三线</p>
+            <p class="hide">郑州</p>
+            <p class="hide">洛阳</p>
+        </div>
+
+
+        <li class="has-submenu" onclick="Open(1);">
+                <a class="menu-title" href="javascript:void(0);">
+                    <i class="fa fa-leaf"></i> <span class="nav-label">核心</span>
+                </a>
+                <ul id='1' class="sub-menu hide">
+                  <li><a href="jQuery_selector_context.html">jQuery([sel,[context]])</a></li>
+                  <li><a href="jQuery_html_ownerDocument.html">jQuery(html,[ownerDoc])</a><sup>1.8*</sup></li>
+                  <li><a href="jQuery_callback.html">jQuery(callback)</a></li>
+                  <li><a href="jQuery.holdReady.html">jQuery.holdReady(hold)</a><sup>1.6+</sup></li>
+                  <li><a href="each.html">each(callback)</a></li>
+                  <li><a href="size.html">size()</a></li>
+                  <li><a href="length.html">length</a></li>
+                  <li><a href="selector.html">selector</a></li>
+                  <li><a href="context.html">context</a></li>
+                  <li><a href="get.html">get([index])</a></li>
+                  <li><a href="index_1.html">index([selector|element])</a></li>
+                  <li><a href="data.html">data([key],[value])</a></li>
+                  <li><a href="removeData.html">removeData([name|list])</a><sup>1.7*</sup></li>
+                  <li><a href="jQuery.data.html"><del>$.data(ele,[key],[val])</del></a><sup>1.8-</sup></li>
+                  <li><a title="queue(element,[queueName])" href="queue.html">queue(e,[q])</a></li>
+                  <li><a title="dequeue([queueName])" href="dequeue.html">dequeue([queueName])</a></li>
+                  <li><a title="clearQueue([queueName])" href="clearQueue.html">clearQueue([queueName])</a></li>
+                  <li><a href="jQuery.fn.extend.html">jQuery.fn.extend(object)</a></li>
+                  <li><a href="jQuery.extend_object.html">jQuery.extend(object)</a></li>
+                  <li><a title="jQuery.noConflict([extreme])" href="jQuery.noConflict.html">jQuery.noConflict([ex])</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu" onclick="Open(2);">
+                <a class="menu-title" href="javascript:void(0);">
+                    <i class="fa fa-leaf"></i> <span class="nav-label">选择器</span>
+                </a>
+                <ul id="2" class="sub-menu hide">
+                  <li><a href="id.html">#id</a></li>
+                  <li><a href="element.html">element</a></li>
+                  <li><a href="class.html">.class</a></li>
+                  <li><a href="all.html">*</a></li>
+                  <li><a href="multiple.html">selector1,selector2,selectorN</a></li>
+                  <li><a href="descendant.html">ancestor descendant</a></li>
+                  <li><a href="child.html">parent &gt;  child</a></li>
+                  <li><a href="next_1.html">prev + next</a></li>
+                  <li><a href="siblings_1.html">prev ~ siblings</a></li>
+                  <li><a href="first_1.html">:first</a></li>
+                  <li><a href="not_1.html">:not(selector)</a></li>
+                  <li><a href="even.html">:even</a></li>
+                  <li><a href="odd.html">:odd</a></li>
+                  <li><a href="eq_1.html">:eq(index)</a></li>
+                  <li><a href="gt.html">:gt(index)</a></li>
+                  <li><a href="lang.html">:lang</a><sup>1.9+</sup></li>
+                  <li><a href="last_1.html">:last</a></li>
+                  <li><a href="lt.html">:lt(index)</a></li>
+                  <li><a href="header.html">:header</a></li>
+                  <li><a href="animated.html">:animated</a></li>
+                  <li><a href="focus_1.html">:focus</a><sup>1.6+</sup></li>
+                  <li><a href="root.html">:root</a><sup>1.9+</sup></li>
+                  <li><a href="target.html">:target</a><sup>1.9+</sup></li>  
+                  <li><a href="contains.html">:contains(text)</a></li>
+                  <li><a href="empty_1.html">:empty</a></li>
+                  <li><a href="has_1.html">:has(selector)</a></li>
+                  <li><a href="parent_1.html">:parent</a></li>
+                  <li><a href="hidden_1.html">:hidden</a></li>
+                  <li><a href="visible.html">:visible</a></li>
+                  <li><a href="attributeHas.html">[attribute]</a></li>
+                  <li><a href="attributeEquals.html">[attribute=value]</a></li>
+                  <li><a href="attributeNotEqual.html">[attribute!=value]</a></li>
+                  <li><a href="attributeStartsWith.html">[attribute^=value]</a></li>
+                  <li><a href="attributeEndsWith.html">[attribute$=value]</a></li>
+                  <li><a href="attributeContains.html">[attribute*=value]</a></li>
+                  <li><a href="attributeMultiple.html">[attrSel1][attrSel2][attrSelN]</a></li>
+                  <li><a href="firstChild.html">:first-child</a></li>
+                  <li><a href="firstOfType.html">:first-of-type</a><sup>1.9+</sup></li>
+                  <li><a href="lastChild.html">:last-child</a></li>
+                  <li><a href="lastOfType.html">:last-of-type</a><sup>1.9+</sup></li>
+                  <li><a href="nthChild.html">:nth-child</a></li>
+                  <li><a href="nthLastChild.html">:nth-last-child</a><sup>1.9+</sup></li>
+                  <li><a href="nthLastOfType.html">:nth-last-of-type</a><sup>1.9+</sup></li>
+                  <li><a href="nthOfType.html">:nth-of-type</a><sup>1.9+</sup></li>
+                  <li><a href="onlyChild.html">:only-child</a></li>
+                  <li><a href="onlyOfType.html">:only-of-type</a><sup>1.9+</sup></li>
+                  <li><a href="input.html">:input</a></li>
+                  <li><a href="text_1.html">:text</a></li>
+                  <li><a href="password.html">:password</a></li>
+                  <li><a href="radio.html">:radio</a></li>
+                  <li><a href="checkbox.html">:checkbox</a></li>
+                  <li><a href="submit_1.html">:submit</a></li>
+                  <li><a href="image.html">:image</a></li>
+                  <li><a href="reset.html">:reset</a></li>
+                  <li><a href="button.html">:button</a></li>
+                  <li><a href="file_1.html">:file</a></li>
+                  <li><a href="enabled_1.html">:enabled</a></li>
+                  <li><a href="disabled_1.html">:disabled</a></li>
+                  <li><a href="checked_1.html">:checked</a></li>
+                  <li><a href="selected_1.html">:selected</a></li>
+                </ul>
+            </li>
+
+
+        <div>
+            asd
+        </div>
+
+        <div class="return hide">
+            返回顶部
+        </div>
+
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            var idt = $('#id1').text();
+            var idh = $('#id1').html();
+            console.log(idt);
+            console.log(idh);
+
+            var idi = $("input[name='username']").val();
+            console.log(idi);
+            $("input[name='username']").val('asd');
+
+            var ida = $("input[name='username']").attr('name');
+            console.log(ida);
+            $("input[name='username']").attr('value','ok');
+            $("input[type='checkbox']").prop('checked',true);
+
+            function Open(){
+                $(this).siblings().toggleClass();
+            }
+
+            function Open(i){
+                $('#'+i).toggleClass();
+            }
+
+            $(function(){
+                $('.return').click(function(){
+                    $(window).scrollTop(0);
+                });
+            })
+            
+            $(window).scroll( function() {
+                //console.log(123);
+                var height = $(window).scrollTop();
+                if(height>0){
+                    $('.return').removeClass('hide')
+                }else{
+                    $('.return').addClass('hide')
+                }
+            } );
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title> 百度一下你就知道  </title>
+        <style>
+            .show{
+
+            }
+            .hide{
+                display: none
+            }
+            .gray{
+                color: gray
+            }
+            .black{
+                color: black
+            }
+        </style>
+
+        <script type="text/javascript">
+            function Go(){
+                var tit = document.title;
+                var first = tit.charAt(0);
+                var sub = tit.substring(1,tit.length);
+                document.title = sub + first;
+            }
+            stop = setInterval('Go()',500)
+            function Stop(){
+                clearInterval(stop);
+            }
+
+            
+        </script>
+
+    </head>
+
+    <body>
+        <div id="id1">
+        </div>
+        <div id="id2" class="show">
+            你看不到我
+        </div>
+
+        <form id="id3" action="https://www.sogou.com/web?" method="GET" target="_blank">
+            <input type="text" name="query" />
+            <input type="submit" value="提交" />
+            <input type="button" value="伪提交" onclick="Foo();" />
+        </form>
+
+        <br/>
+
+        <input type="text" class="gray" id="id4" value="请输入关键字" onfocus="Enter();" onblur="Leave();" />
+        <hr/>
+
+        <div style="width:500px;background-color:gray">
+            <div id="id5" style="width:0px;background-color:yellow;height:20px;"></div>
+        </div>
+
+
+        <script src="js.js"></script>
+        <script type="text/javascript">
+            alert('123');
+        </script>
+
+        <script>
+            var tag = document.createElement('a');
+            tag.href = 'http://www.baidu.com';
+            tag.target = '_blank';
+            tag.innerText = '百度一下你就知道';
+
+            document.getElementById('id1').appendChild(tag);
+        </script>
+
+        <script>
+            var cla = document.getElementById('id2');
+            cla.className = 'hide';
+        </script>
+
+        <script>
+            function Foo(){
+                document.getElementById('id3').submit();
+            }
+
+            function Enter(){
+                var id = document.getElementById('id4');
+                id.className = 'black';
+
+                if(id.value == '请输入关键字' || id.value.trim() == ''){
+                    id.value = '';
+                }
+            }
+
+            function Leave(){
+                var id = document.getElementById('id4');
+                var val = id.value;
+
+                if(val.length == 0 || id.value.trim() == ''){
+                    id.value = '请输入关键字';
+                    id.className = 'gray';
+                }else{
+                    id.className = 'black';
+                }
+            }
+
+            pro = 0;
+            function Id5(){
+                var id = document.getElementById('id5');
+                pro = pro +1;
+                if (pro == 500){
+                    pro = 0;
+                }
+                id.style.width = pro + 'px'
+            }
+            setInterval('Id5()',20)
+        </script>
+
+    </body>
+</html>
